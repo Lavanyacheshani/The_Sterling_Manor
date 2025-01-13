@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*Import Recoleta font family*/
+@font-face {
+  font-family: "Recoleta";
+  src: url("./fonts/Recoleta-RegularDEMO.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*Import Cerapro-regular font family*/
+@font-face {
+  font-family: "CeraPro-regular";
+  src: url("./fonts/Fontspring-DEMO-cerapro-medium.otf");
+}
+
+/*Import Cerapro-light font family*/
+@font-face {
+  font-family: "CeraPro-light";
+  src: url("./fonts/Fontspring-DEMO-cerapro-light.otf");
+}
+
+@font-face {
+  font-family: "carla";
+  src: url("./fonts/Carla-Sans-Light.otf");
+}
+
+@layer base {
+  :root {
+    --background-color: #f9f9f8;
+    --primary-color: #071b2b;
+    --gold-accent: #cf8a00;
+  }
+}
+
+@layer base {
+  /** {
+      @apply border-border;
+    }*/
+  body {
+    @apply bg-background;
+  }
+
+  p {
+    @apply font-cerapro_light text-gray-300;
+  }
+
+  h3 {
+    @apply font-cerapro_medium mb-1;
+  }
+
+  ::-webkit-scrollbar {
+    @apply hidden !important;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply hidden !important;
+  }
+
+  th,
+  td {
+    @apply p-4 font-cerapro_light;
+  }
+
+  label {
+    @apply font-cerapro_light text-body;
+  }
+
+  .body-text {
+    @apply text-sm sm:text-[16px] xl:text-lg 4xl:text-xl 5xl:text-2xl placeholder:text-sm placeholder:xl:text-lg;
+  }
+
+  .text-title {
+    @apply text-sm sm:text-[16px] md:text-xl 3xl:text-2xl 4xl:text-3xl placeholder:text-sm placeholder:xl:text-2xl font-carla;
+  }
+
+  .home-heading {
+    @apply text-2xl md:text-4xl lg:text-5xl 4xl:text-7xl text-primary;
+  }
+
+  .page_gap_x_small {
+    @apply px-5;
+  }
+
+  .section_gap_y {
+    @apply py-4 md:py-8 lg:py-10 3xl:py-14;
+  }
+
+  .section_gap_x {
+    @apply px-5 md:px-16 3xl:px-20 4xl:px-32;
+  }
+
+  .custom_round {
+    @apply rounded-tl-3xl rounded-br-3xl;
+  }
+
+  .max-width {
+    @apply max-w-[1920px] mx-auto
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background-image: linear-gradient(
+      90deg,
+      #e22d59 0%,
+      #fc45ac 50%,
+      #c42934 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+}
